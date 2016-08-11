@@ -32,6 +32,8 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'Sample\ Code/VideoPreviewer/VideoPreviewer/*.{h,m}', 'Sample\ Code/VideoPreviewer/VideoPreviewer/Lb2AUDHack/*.{h,m}'
 
+  s.xcconfig = { 'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include/libavformat"', 'LIBRARY_SEARCH_PATHS' => '"${PODS_ROOT}/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib"' }
+
 
   #s.ios.vendored_library = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib/libavcodec.a','Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib/libavformat.a','Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib/libavutil.a'
   #s.ios.header_mappings_dir = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include/**/*.h'
@@ -55,7 +57,6 @@ TODO: Add long description of the pod here.
     ss.vendored_libraries  = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib/*.a'
     ss.libraries = 'avformat','avcodec','avutil','z'
     #$(PROJECT_DIR)/VideoPreviewer/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include
-    #ss.xcconfig = { 'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include/libavformat"', 'LIBRARY_SEARCH_PATHS' => '"${PODS_ROOT}/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib"' }
 
     #ss.xcconfig = { 'ALWAYS_SEARCH_USER_PATHS' => 'YES' }
   end
