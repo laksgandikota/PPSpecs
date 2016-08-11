@@ -53,7 +53,7 @@ TODO: Add long description of the pod here.
     ss.private_header_files = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include/libavformat/*.h'
     ss.header_mappings_dir = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include'
 
-    ss.vendored_libraries  = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib/avformat.a'
+    ss.vendored_libraries  = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib/libavformat.a'
     ss.libraries = 'avformat', 'z'
     ss.xcconfig = { 'ALWAYS_SEARCH_USER_PATHS' => 'YES' }
   end
