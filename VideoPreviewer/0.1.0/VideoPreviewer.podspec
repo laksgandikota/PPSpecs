@@ -57,7 +57,7 @@ TODO: Add long description of the pod here.
     #$(PROJECT_DIR)/VideoPreviewer/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include
     #ss.xcconfig = { 'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include/libavformat"', 'LIBRARY_SEARCH_PATHS' => '"${PODS_ROOT}/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib"' }
 
-    ss.xcconfig = { 'ALWAYS_SEARCH_USER_PATHS' => 'YES' }
+    #ss.xcconfig = { 'ALWAYS_SEARCH_USER_PATHS' => 'YES' }
   end
 
 end
