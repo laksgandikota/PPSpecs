@@ -49,7 +49,7 @@ TODO: Add long description of the pod here.
 
   s.subspec 'libavformat' do |ss|
     ss.source_files = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include/libavformat/*.h'
-    ss.private_header_files = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include/libavformat/*.h'
+    #ss.private_header_files = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include/libavformat/*.h'
     ss.header_mappings_dir = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include'
 
     ss.vendored_libraries  = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib/libavformat.a'
