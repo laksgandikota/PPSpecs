@@ -30,8 +30,9 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
+  s.header_mappings_dir = 'VideoPreviewer0/'
   s.source_files = 'Sample\ Code/VideoPreviewer/VideoPreviewer/*.{h,m}', 'Sample\ Code/VideoPreviewer/VideoPreviewer/Lb2AUDHack/*.{h,m}'
-  s.header_mappings_dir = ''
+
  #  s.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(inherited) ${PODS_ROOT}/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include/libavformat"',
  #  'LIBRARY_SEARCH_PATHS' => '"$(inherited) ${PODS_ROOT}/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib"',
  #  'FRAMEWORK_SEARCH_PATHS' => '"$(inherited) ${PODS_ROOT}/Sample\ Code/VideoPreviewer/"'
