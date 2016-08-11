@@ -42,20 +42,20 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
 
-  s.default_subspec = 'libavformat'
+  s.default_subspec = 'ffmpeg'
 
-  s.frameworks = 'VideoToolbox', 'CoreMedia', 'z'
+  s.frameworks = 'VideoToolbox', 'CoreMedia'
 
 
-  s.subspec 'libavformat' do |ss|
-    ss.source_files = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include/libavformat/*.h'
-    #ss.private_header_files = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include/libavformat/*.h'
-    #ss.header_mappings_dir = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include'
+  s.subspec 'ffmpeg' do |ss|
+    ss.source_files = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include/**/*.h'
+    ss.public_header_files = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include/**/*.h'
+    ss.header_mappings_dir = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include'
 
-    ss.vendored_libraries  = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib/libavformat.a'
-    #ss.libraries = 'z'
+    ss.vendored_libraries  = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib/*.a'
+    ss.libraries = 'avformat','avcodec','avutil','z'
     #$(PROJECT_DIR)/VideoPreviewer/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include
-    ss.xcconfig = { 'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include/libavformat"', 'LIBRARY_SEARCH_PATHS' => '"${PODS_ROOT}/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib"' }
+    #ss.xcconfig = { 'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include/libavformat"', 'LIBRARY_SEARCH_PATHS' => '"${PODS_ROOT}/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib"' }
 
     ss.xcconfig = { 'ALWAYS_SEARCH_USER_PATHS' => 'YES' }
   end
