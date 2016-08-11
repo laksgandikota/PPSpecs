@@ -50,10 +50,11 @@ TODO: Add long description of the pod here.
   s.subspec 'libavformat' do |ss|
     ss.source_files = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include/libavformat/*.h'
     #ss.private_header_files = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include/libavformat/*.h'
-    ss.header_mappings_dir = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include'
+    #ss.header_mappings_dir = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include'
 
     ss.vendored_libraries  = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib/libavformat.a'
     #ss.libraries = 'avformat', 'z'
+    #$(PROJECT_DIR)/VideoPreviewer/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include
     ss.xcconfig = { 'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include/libavformat"', 'LIBRARY_SEARCH_PATHS' => '"${PODS_ROOT}/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib"' }
 
     ss.xcconfig = { 'ALWAYS_SEARCH_USER_PATHS' => 'YES' }
