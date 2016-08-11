@@ -32,7 +32,10 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'Sample\ Code/VideoPreviewer/VideoPreviewer/*.{h,m}', 'Sample\ Code/VideoPreviewer/VideoPreviewer/Lb2AUDHack/*.{h,m}'
 
-  s.xcconfig = { 'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include/libavformat"', 'LIBRARY_SEARCH_PATHS' => '"${PODS_ROOT}/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib"' }
+  s.xcconfig = { 'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include/libavformat"',
+  'LIBRARY_SEARCH_PATHS' => '"${PODS_ROOT}/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib"',
+  'FRAMEWORK_SEARCH_PATHS' => '"${PODS_ROOT}/Sample\ Code/VideoPreviewer/"'
+ }
 
 
   #s.ios.vendored_library = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib/libavcodec.a','Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib/libavformat.a','Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib/libavutil.a'
