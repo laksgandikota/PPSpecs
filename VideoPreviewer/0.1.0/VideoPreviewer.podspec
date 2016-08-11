@@ -44,7 +44,7 @@ TODO: Add long description of the pod here.
 
   s.default_subspec = 'libavformat'
 
-  #s.frameworks = 'VideoToolbox', 'CoreMedia'
+  s.frameworks = 'VideoToolbox', 'CoreMedia', 'z'
 
 
   s.subspec 'libavformat' do |ss|
@@ -53,7 +53,7 @@ TODO: Add long description of the pod here.
     #ss.header_mappings_dir = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include'
 
     ss.vendored_libraries  = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib/libavformat.a'
-    #ss.libraries = 'avformat', 'z'
+    #ss.libraries = 'z'
     #$(PROJECT_DIR)/VideoPreviewer/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include
     ss.xcconfig = { 'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include/libavformat"', 'LIBRARY_SEARCH_PATHS' => '"${PODS_ROOT}/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib"' }
 
