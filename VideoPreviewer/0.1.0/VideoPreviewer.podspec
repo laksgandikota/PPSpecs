@@ -31,6 +31,7 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'Sample\ Code/VideoPreviewer/VideoPreviewer/*.{h,m}'
+  s.ios.vendored_library = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg'
 
   s.xcconfig = { 'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include"', 'LIBRARY_SEARCH_PATHS' => '"${PODS_ROOT}/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib"' }
 
@@ -40,6 +41,13 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'VideoToolbox', 'CoreMedia'
-  s.ios.library = 'z.tbd'
+  s.ios.library = 'z'
+
+  s.subspec 'plat' do |ss|
+    ss.source_files =
+      'viewersdk/native/libs/plat/*.{h,c,cxx}',
+    ss.header_mappings_dir = 'viewersdk/native/libs'
+    ss.xcconfig = { 'ALWAYS_SEARCH_USER_PATHS' => 'NO' }
+  end
 
 end
