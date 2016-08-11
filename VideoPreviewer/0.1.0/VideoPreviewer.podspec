@@ -33,8 +33,8 @@ TODO: Add long description of the pod here.
   s.source_files = 'Sample\ Code/VideoPreviewer/VideoPreviewer/*.{h,m}', 'Sample\ Code/VideoPreviewer/VideoPreviewer/Lb2AUDHack/*.{h,m}'
 
 
-  s.ios.vendored_library = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib/libavcodec.a','Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib/libavformat.a','Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib/libavutil.a'
-  s.ios.header_mappings_dir = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include/**/*.h'
+  #s.ios.vendored_library = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib/libavcodec.a','Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib/libavformat.a','Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib/libavutil.a'
+  #s.ios.header_mappings_dir = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include/**/*.h'
   #s.xcconfig = { 'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include"', 'LIBRARY_SEARCH_PATHS' => '"${PODS_ROOT}/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib"' }
 
   # s.resource_bundles = {
@@ -43,18 +43,18 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
 
-  s.default_subspec = 'precompiled'
+  s.default_subspec = 'libavformat'
 
-  s.frameworks = 'VideoToolbox', 'CoreMedia'
-  s.ios.library = 'z'
+  #s.frameworks = 'VideoToolbox', 'CoreMedia'
 
-  s.subspec 'precompiled' do |ss|
+
+  s.subspec 'libavformat' do |ss|
     ss.source_files = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include/**/*.h'
     ss.public_header_files = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include/**/*.h'
     ss.header_mappings_dir = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include'
 
     ss.vendored_libraries  = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib/*.a'
-     ss.libraries = 'avcodec', 'avdevice', 'avfilter', 'avformat', 'avutil', 'swresample', 'swscale', 'iconv', 'z', 'bz2'
+     ss.libraries = 'avcodec', 'avformat', 'avutil', 'z'
     #ss.xcconfig = { 'ALWAYS_SEARCH_USER_PATHS' => 'NO' }
   end
 
