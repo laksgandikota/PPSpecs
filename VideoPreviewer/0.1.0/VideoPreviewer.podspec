@@ -46,14 +46,13 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
 
-  s.default_subspec = 'VideoPreviewer0', 'ffmpeg'
+  s.default_subspec = 'VideoPreviewer0'
 
   s.frameworks = 'VideoToolbox', 'CoreMedia'
 
   s.subspec 'VideoPreviewer0' do |ss|
-    ss.header_mappings_dir = 'VideoPreviewer0/'
     ss.source_files = 'Sample\ Code/VideoPreviewer/VideoPreviewer/*.{h,m}', 'Sample\ Code/VideoPreviewer/VideoPreviewer/Lb2AUDHack/*.{h,m}'
-
+    ss.header_mappings_dir = 'VideoPreviewer0/'
   end
 
   s.subspec 'ffmpeg' do |ss|
