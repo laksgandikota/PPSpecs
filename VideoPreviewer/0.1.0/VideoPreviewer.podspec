@@ -35,7 +35,7 @@ TODO: Add long description of the pod here.
 
   #s.ios.vendored_library = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib/libavcodec.a','Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib/libavformat.a','Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib/libavutil.a'
   #s.ios.header_mappings_dir = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include/**/*.h'
-  #s.xcconfig = { 'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include"', 'LIBRARY_SEARCH_PATHS' => '"${PODS_ROOT}/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib"' }
+  s.xcconfig = { 'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include"', 'LIBRARY_SEARCH_PATHS' => '"${PODS_ROOT}/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib"' }
 
   # s.resource_bundles = {
   #   'VideoPreviewer' => ['VideoPreviewer/Assets/*.png']
