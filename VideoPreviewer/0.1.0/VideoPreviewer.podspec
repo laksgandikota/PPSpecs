@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'VideoPreviewer'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of VideoPreviewer.'
+  s.summary          = 'VideoPreviewer library for DJI\'s Framework.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,50 +21,35 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://www.laksg.com'
+  s.homepage         = 'https://github.com/laksgandikota/VideoPreviewer'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Laks Gandikota' => 'laks.gandikota@gmail.com' }
-  s.source           = { :git => 'https://github.com/dji-sdk/Mobile-SDK-iOS.git', :tag => 'master' }
+  s.source           = { :git => 'https://github.com/laksgandikota/VideoPreviewer.git', :branch => 'master', :submodules => true }
   # s.social_media_url = 'https://twitter.com/laksgandikota'
 
   s.ios.deployment_target = '8.0'
 
+  s.source_files = 'VideoPreviewer/Classes/**/*'
 
- #  s.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(inherited) ${PODS_ROOT}/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include/libavformat"',
- #  'LIBRARY_SEARCH_PATHS' => '"$(inherited) ${PODS_ROOT}/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib"',
- #  'FRAMEWORK_SEARCH_PATHS' => '"$(inherited) ${PODS_ROOT}/Sample\ Code/VideoPreviewer/"'
- # }
+#'fmpeg-dji-libs/lib/libavformat.a'
+# 'fmpeg-dji-libs/include/**/*.h',
+  
+  s.xcconfig = {
+        'USER_HEADER_SEARCH_PATHS' => '"fmpeg-dji-libs/include"'
+
+  }
+#        'LIBRARY_SEARCH_PATHS' => '"$(inherited) /Users/laks/Projects/vp/VideoPreviewer/fmpeg-dji-libs/lib"'
+
+#  s.default_subspec = 'precompiled'
 
 
-  #s.ios.vendored_library = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib/libavcodec.a','Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib/libavformat.a','Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib/libavutil.a'
-  #s.ios.header_mappings_dir = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include/**/*.h'
-
-  # s.resource_bundles = {
-  #   'VideoPreviewer' => ['VideoPreviewer/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-
-  s.default_subspec = 'VideoPreviewer0'
-
-  s.frameworks = 'VideoToolbox', 'CoreMedia'
-
-  s.subspec 'VideoPreviewer0' do |ss|
-    ss.source_files = 'Sample\ Code/VideoPreviewer/VideoPreviewer/*.{h,m}', 'Sample\ Code/VideoPreviewer/VideoPreviewer/Lb2AUDHack/*.{h,m}'
-    ss.header_mappings_dir = 'VideoPreviewer0/'
-  end
-
-  s.subspec 'ffmpeg' do |ss|
-     ss.source_files = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include/**/*.h'
-  #   ss.public_header_files = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include/**/*.h'
-     ss.header_mappings_dir = 'ffmpeg/include'
-  #
-  #   ss.vendored_libraries  = 'Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/lib/*.a'
-  #   ss.libraries = 'avformat','avcodec','avutil','z'
-  #   #$(PROJECT_DIR)/VideoPreviewer/Sample\ Code/VideoPreviewer/VideoPreviewer/ffmpeg/include
-  #
-  #   #ss.xcconfig = { 'ALWAYS_SEARCH_USER_PATHS' => 'YES' }
-  end
+#  s.subspec 'precompiled' do |ss|
+#        ss.source_files        = 'fmpeg-dji-libs/include/**/*.h'
+#        ss.public_header_files = 'fmpeg-dji-libs/include/'
+#        ss.header_mappings_dir = 'fmpeg-dji-libs/include'
+#        ss.vendored_libraries  = 'fmpeg-dji-libs/lib/*.a'
+#        ss.libraries = 'avcodec', 'avdevice', 'avfilter', 'avformat', 'avutil', 'swresample', 'swscale', 'iconv', 'z', 'bz2'
+#  end
 
 end
