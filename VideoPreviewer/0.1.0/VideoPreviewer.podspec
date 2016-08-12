@@ -44,12 +44,12 @@ TODO: Add long description of the pod here.
 #  s.default_subspec = 'precompiled'
 
 
-#  s.subspec 'precompiled' do |ss|
-#        ss.source_files        = 'fmpeg-dji-libs/include/**/*.h'
-#        ss.public_header_files = 'fmpeg-dji-libs/include/'
-#        ss.header_mappings_dir = 'fmpeg-dji-libs/include'
-#        ss.vendored_libraries  = 'fmpeg-dji-libs/lib/*.a'
-#        ss.libraries = 'avcodec', 'avdevice', 'avfilter', 'avformat', 'avutil', 'swresample', 'swscale', 'iconv', 'z', 'bz2'
-#  end
+  s.subspec 'precompiled' do |ss|
+       ss.source_files        = 'fmpeg-dji-libs/include/**/*.h'
+       ss.public_header_files = 'fmpeg-dji-libs/include/'
+       ss.header_mappings_dir = 'fmpeg-dji-libs/include'
+       ss.vendored_libraries  = 'fmpeg-dji-libs/lib/*.a'
+      ss.libraries = 'avcodec', 'avdevice', 'avfilter', 'avformat', 'avutil', 'swresample', 'swscale', 'iconv', 'z', 'bz2'
+  end
 
 end
