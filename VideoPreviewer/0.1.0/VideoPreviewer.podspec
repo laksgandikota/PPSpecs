@@ -25,7 +25,7 @@ TODO: Add long description of the pod here.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Laks Gandikota' => 'laks.gandikota@gmail.com' }
-  s.source           = { :git => 'https://github.com/laksgandikota/VideoPreviewer.git', :branch => 'master', :submodules => true }
+  s.source           = { :git => 'https://github.com/laksgandikota/VideoPreviewer.git', :tag => s.version, :submodules => true }
   # s.social_media_url = 'https://twitter.com/laksgandikota'
 
   s.ios.deployment_target = '8.0'
@@ -34,9 +34,9 @@ TODO: Add long description of the pod here.
 
 #'fmpeg-dji-libs/lib/libavformat.a'
 # 'fmpeg-dji-libs/include/**/*.h',
-  
+
   s.xcconfig = {
-        'USER_HEADER_SEARCH_PATHS' => '"fmpeg-dji-libs/include"'
+        'USER_HEADER_SEARCH_PATHS' => '"ffmpeg-dji-libs/include"'
 
   }
 #        'LIBRARY_SEARCH_PATHS' => '"$(inherited) /Users/laks/Projects/vp/VideoPreviewer/fmpeg-dji-libs/lib"'
@@ -45,10 +45,10 @@ TODO: Add long description of the pod here.
 
 
   s.subspec 'precompiled' do |ss|
-       ss.source_files        = 'fmpeg-dji-libs/include/**/*.h'
-       ss.public_header_files = 'fmpeg-dji-libs/include/'
-       ss.header_mappings_dir = 'fmpeg-dji-libs/include'
-       ss.vendored_libraries  = 'fmpeg-dji-libs/lib/*.a'
+       ss.source_files        = 'ffmpeg-dji-libs/include/**/*.h'
+       ss.public_header_files = 'ffmpeg-dji-libs/include/'
+       ss.header_mappings_dir = 'ffmpeg-dji-libs/include'
+       ss.vendored_libraries  = 'ffmpeg-dji-libs/lib/*.a'
       ss.libraries = 'avcodec', 'avdevice', 'avfilter', 'avformat', 'avutil', 'swresample', 'swscale', 'iconv', 'z', 'bz2'
   end
 
