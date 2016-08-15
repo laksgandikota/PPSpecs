@@ -43,6 +43,7 @@ TODO: Add long description of the pod here.
 
 #  s.default_subspec = 'precompiled'
 
+  s.frameworks = 'CoreMedia', 'VideoToolbox'
 
   s.subspec 'precompiled' do |ss|
        ss.source_files        = 'ffmpeg-dji-libs/include/**/*.h'
