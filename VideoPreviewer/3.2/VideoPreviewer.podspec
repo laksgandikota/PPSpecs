@@ -8,16 +8,16 @@
 
 Pod::Spec.new do |s|
 
-  s.name         = "DJI-SDK-iOS"
+  s.name         = "VideoPreviewer"
   s.version      = "3.2"
-  s.summary      = "DJI Mobile SDK for iOS"
-  s.homepage     = "https://github.com/dji-sdk/Mobile-SDK-iOS"
+  s.summary      = "VideoPreviewer for DJI SDK"
+  s.homepage     = "https://github.com/laksgandikota/VideoPreviewer.git"
   s.license      = { :type => 'CUSTOM', :file => 'LICENSE.txt'}
   s.author       = { "DJI SDK" => "sdk@dji.com" }
   s.platform     = :ios, '8.0'
   s.requires_arc = true
-  s.source       = { :git => "https://github.com/dji-sdk/Mobile-SDK-iOS.git", :tag => "v3.2" }
+  s.source       = { :git => "https://github.com/laksgandikota/VideoPreviewer.git", :tag => "v3.2" }
 
-  s.ios.vendored_frameworks = 'Sample Code/*.framework'
+  s.ios.vendored_frameworks = 'Framework/*.framework'
 
 end
